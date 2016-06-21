@@ -243,16 +243,24 @@ input:-ms-input-placeholder
     li
         font-size 2em
         margin-bottom 8px
-        trans()
+
+        a
+            text-decoration: none
+            color: #333
+            trans()
+            &.checked
+                color #CCC
+
         input
             margin-right 10px
-        &.checked
-            color #CCC
+
         button
             padding 10px
             margin-left 40px
             line-height 0.5
             float right
+
+
 
 .panel-body
     .form-group

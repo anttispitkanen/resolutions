@@ -16,12 +16,12 @@ export default class ResolutionSingle extends Component {
     const status = this.props.resolution.complete ? <span className="completed">Completed</span> : "";
 
     return(
-      <li className={resolutionClass}>
+      <li>
         <input type="checkbox"
                 readOnly={true}
                 checked={this.props.resolution.complete}
                 onClick={this.toggleChecked.bind(this)} />
-        {this.props.resolution.text}
+              <a className={resolutionClass} href={`/resolutions/${this.props.resolution._id}`}>{this.props.resolution.text}</a>
         {status}
         <button className="btn-cancel"
                 onClick={this.deleteResolution.bind(this)}>
